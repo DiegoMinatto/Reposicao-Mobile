@@ -23,9 +23,9 @@ export default class App extends React.Component {
     var res = this.state.data.split("-");
     var dt = new Date(res[2] + '-' + res[1] + '-' + res[0] );
     if((dt.getDay() === 5) || (dt.getDay() === 6)){
-      this.setState({folgar: true, msg: 'Esta data cai em um final de semana!'})
+      this.setState({folgar: true, msg: `Sim, esta data cai em um ${dt.getDay() === 5 ? 'sabado' : 'domingo'}!`})
     }else{
-      this.setState({folgar: false, msg: 'Esta data não cai em um final de semana!'})
+      this.setState({folgar: false, msg: 'Não, esta data não cai em um final de semana!'})
     }
 
   }
